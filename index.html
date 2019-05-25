@@ -8,39 +8,57 @@
     <title>Crystal Collector</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <link rel="stylesheet" href="./assets/javascript/game.js">
 </head>
 
 <body>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+    <div class="card" style="width: 100%;">
         <div class="card-body">
             <h5 class="card-title">Crystal Collector</h5>
-            <p class="card-text">Click from the below crystals to add up to the target sum</p>
+            <p class="card-text">Click one of the crystals below to add up to the target points</p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Points: <span id="points"></span></li>
+            <li class="list-group-item">Current Points: <span id="points"></span></li>
+            <li class="list-group-item">Target Points: <span id="target-points"></span></li>
             <li class="list-group-item">Losses: <span id="losses"></span></li>
             <li class="list-group-item">Wins: <span id="wins"></span></li>
-            <li class="list-group-item">Select Gems: <span id="gems"></span></li>
+            <li class="list-group-item">Select a Crystal: <span id="crystalSelection"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3"><button type="button" class="btn btn-primary" id="crystal"><img src="./assets/images/bluegem.png" alt="" class="img-fluid img-thumbnail"></button></div>
+                        <div class="col-3"><button type="button" class="btn btn-secondary" id="crystal"><img src="./assets/images/pylon.png" alt="" class="img-fluid img-thumbnail"></button></div>
+                        <div class="col-3"><button type="button" class="btn btn-success" id="crystal"><img src="./assets/images/emerald.png" alt="" class="img-fluid img-thumbnail"></button></div>
+                        <div class="col-3"><button type="button" class="btn btn-danger" id="crystal"><img src="./assets/images/ruby.png" alt="" class="img-fluid img-thumbnail"></button></div>
+                    </div>
+                </div>
+            </li>
         </ul>
-        <div class="card-body">
+        <!-- if i want to add some links to other projects -->
+        <!-- <div class="card-body">
             <a href="#" class="card-link">Card link</a>
             <a href="#" class="card-link">Another link</a>
-        </div>
+        </div> -->
     </div>
     <script>
-        // variables for grabbing html elements to alter
+        $(document).ready(function() {
+            // variables for grabbing html elements to alter
 
-        // variables for the game
-        // create variable for holding score
-        let points = 0;
-        // variable for target points
-        let targetPoints = 0;
-        // create different gems
+            // variables for the game
+            // create variable for holding score
+            let points = 0;
+            // variable for target points
+            let targetPoints = Math.ceil(Math.random() * 98);
+            // create different gems
+            $("#crystal").on("click", function() {
+                $('#target-points').text = targetPoints;
+            });
+            // set target score to be random
 
-        // set target score to be random
-
-        // set what happens if win or lose
+            // set what happens if win or lose
+            // if lose restart game add to loss
+            // if win restart game but add to points
+        });
     </script>
 </body>
 
