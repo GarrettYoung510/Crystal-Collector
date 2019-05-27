@@ -8,15 +8,16 @@
     <title>Crystal Collector</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/javascript/game.js">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="card" style="width: 100%;">
         <div class="card-body">
-            <h5 class="card-title">Crystal Collector</h5>
-            <p class="card-text">Click one of the crystals below to add up to the target points</p>
+            <h2 class="card-title text-center">Crystal Collector</h2>
+            <h5 class="card-text text-center">Select from the crystals below to add up to the target points!</h5>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Current Points: <span id="points"></span></li>
@@ -68,7 +69,7 @@
 
                 if (points === targetPoints) {
                     // win condition and alert
-                    alert("you win!");
+                    alert("You Win! GOOD JOB!");
                     // win
                     wins++;
                     // updates wins for user to see
@@ -82,7 +83,7 @@
 
                 } else if (points >= targetPoints) {
                     // lose condition and alert
-                    alert("try again!");
+                    alert("You lose. Please try again!");
                     // lose
                     losses++;
                     // updates losses for user to see
@@ -95,7 +96,7 @@
                     $('#points').text(points);
 
                 } else {
-                    alert("select another crystal!");
+                    alert("Please select another crystal!");
                     // keep going
                 }
             });
