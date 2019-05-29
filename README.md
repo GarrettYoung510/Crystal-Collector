@@ -1,6 +1,8 @@
 # Crystal-Collector
 https://garrettyoung510.github.io/Crystal-Collector/
 
+![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+
 Crystal Collector is a game where the user selects crystals with different values to add up to a target sum.
 
 ## Getting Started
