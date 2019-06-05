@@ -17,7 +17,7 @@ $(document).ready(function gameStart() {
     $('#crystal1').attr('value', Math.floor(Math.random() * 9));
     $('#crystal2').attr('value', Math.floor(Math.random() * 9));
     $('#crystal3').attr('value', Math.floor(Math.random() * 9));
-    // $('#crystal4').attr('value', Math.floor(Math.random() * 9));
+    $('#crystal4').attr('value', Math.floor(Math.random() * 9));
 
     // create on click function for clicking crystals
     $("#crystal1,#crystal2,#crystal3,#crystal4").on("click", function() {
