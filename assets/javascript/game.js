@@ -14,10 +14,17 @@ $(document).ready(function gameStart() {
     // variable for crystal value
     let crystalValue = 0;
     // set crystals value to random
-    $('#crystal1').attr('value', Math.floor(Math.random() * 9));
-    $('#crystal2').attr('value', Math.floor(Math.random() * 9));
-    $('#crystal3').attr('value', Math.floor(Math.random() * 9));
-    $('#crystal4').attr('value', Math.floor(Math.random() * 9));
+    $('#crystal1').attr('value', Math.floor(Math.random() * 9) + 1);
+    $('#crystal2').attr('value', Math.floor(Math.random() * 9) + 1);
+    $('#crystal3').attr('value', Math.floor(Math.random() * 9) + 1);
+    $('#crystal4').attr('value', Math.floor(Math.random() * 9) + 1);
+
+    function setCrystalValue() {
+        $('#crystal1').attr('value', Math.floor(Math.random() * 9) + 1);
+        $('#crystal2').attr('value', Math.floor(Math.random() * 9) + 1);
+        $('#crystal3').attr('value', Math.floor(Math.random() * 9) + 1);
+        $('#crystal4').attr('value', Math.floor(Math.random() * 9) + 1);
+    };
 
     // create on click function for clicking crystals
     $("#crystal1,#crystal2,#crystal3,#crystal4").on("click", function() {
@@ -41,7 +48,8 @@ $(document).ready(function gameStart() {
             // reset points
             points = 0;
             $('#points').text(points);
-
+            setCrystalValue();
+            // set crystal value to something new
         } else if (points >= targetPoints) {
             // lose condition and alert
             alert("You lose. Please try again!");
@@ -55,7 +63,8 @@ $(document).ready(function gameStart() {
             // reset points
             points = 0;
             $('#points').text(points);
-
+            setCrystalValue();
+            // set crystal value to something new
         } else {
             // alert("Please select another crystal!");
             // keep going
