@@ -1,4 +1,4 @@
-# [Crystal-Collector] (https://garrettyoung510.github.io/Crystal-Collector/)
+# [Crystal-Collector](https://garrettyoung510.github.io/Crystal-Collector/)
 
 ![Picture of the game](https://i.lensdump.com/i/WSu6pM.png)
 
